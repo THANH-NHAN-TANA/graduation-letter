@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#020C12">
+  <meta name="description" content="Thiệp mời tham dự lễ tốt nghiệp của Thành Nhân.">
+  <title>Thành Nhân · Thiệp mời tốt nghiệp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="network-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <g class="net-lines">
+        <path d="M50 140H310L430 270H700L920 150H1130"/>
+        <path d="M190 720L350 560L560 650L750 470L1100 600"/>
+        <path d="M90 360H280L440 470H850L1050 370"/>
+        <path d="M350 560V300L190 140M750 470V250L920 150"/>
+      </g>
+      <g class="bg-nodes">
+        <g transform="translate(50 140)"><circle/><text>CLIENT</text></g>
+        <g transform="translate(310 140)"><circle/><text>SWITCH</text></g>
+        <g transform="translate(430 270)"><circle/><text>ROUTER</text></g>
+        <g transform="translate(700 270)"><circle/><text>SERVER</text></g>
+        <g transform="translate(920 150)"><circle/><text>WIFI</text></g>
+        <g transform="translate(350 560)"><circle/><text>CLIENT</text></g>
+        <g transform="translate(750 470)"><circle/><text>ROUTER</text></g>
+        <g transform="translate(1100 600)"><circle/><text>SERVER</text></g>
+      </g>
+      <circle class="bg-packet packet-a" r="4"/>
+      <circle class="bg-packet packet-b" r="4"/>
+    </svg>
+  </div>
+
+  <section class="connect-gate" id="connect-gate" aria-labelledby="connect-title">
+    <div class="terminal-window terminal-window-large">
+      <header class="terminal-bar">
+        <div class="terminal-dots"><span></span><span></span><span></span></div>
+        <span>graduation-invite.vn</span>
+        <span class="link-up">27.11.2026 · UIT</span>
+      </header>
+      <div class="terminal-body">
+        <p>&gt; preparing a special invitation...</p>
+        <p class="ok-row">&gt; graduation day <span>READY</span></p>
+        <p class="ok-row">&gt; happy moments <span>READY</span></p>
+        <p class="ok-row">&gt; a seat for you <span>SAVED</span></p>
+        <h1 id="connect-title"><span>Một lời mời dành riêng</span><br><strong>cho ngày tốt nghiệp</strong></h1>
+        <p class="terminal-copy">Nhập tên để mình mở thư mời và gửi lời chúc thật riêng cho bạn.</p>
+        <form id="connect-form" novalidate>
+          <label for="client-name">Tên của bạn =</label>
+          <div class="prompt-input"><span>&gt;</span><input id="client-name" name="clientName" autocomplete="name" maxlength="32" placeholder="Nhập tên của bạn" aria-describedby="connect-error"></div>
+          <p class="form-error" id="connect-error" role="alert"></p>
+          <button class="button button-primary" type="submit"><span aria-hidden="true">💌</span> Mở thư mời</button>
+        </form>
+        <div class="handshake-log" id="handshake-log" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="letter-opening" id="letter-opening" aria-hidden="true">
+      <div class="opening-envelope">
+        <div class="opening-flap"></div>
+        <div class="opening-letter">
+          <span>THƯ MỜI LỄ TỐT NGHIỆP</span>
+          <strong data-opening-guest>Thân gửi bạn</strong>
+          <small>27.11.2026 · UIT</small>
+        </div>
+        <div class="opening-front"></div>
+        <div class="opening-seal">TN</div>
+      </div>
+      <p>Đang mở thư cho <strong data-opening-guest>nhiều bạn</strong>...</p>
+    </div>
+    <p class="secure-note"><span></span> MỘT NGÀY ĐẶC BIỆT · MỘT NIỀM VUI TRỌN VẸN</p>
+  </section>
+
+  <div class="app-shell" id="app-shell" aria-hidden="true">
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="Về đầu trang"><span class="brand-pulse"></span>GRADUATION DAY</a>
+      <div class="header-status"><span>27.11</span><span class="status-dot"></span><span>UIT</span></div>
+    </header>
+
+    <main>
+      <section class="hero network-section" id="hero">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">THƯ MỜI LỄ TỐT NGHIỆP</div>
+          <h1 aria-label="Nguyễn Thành Nhân"><span data-graduate-family></span><span data-graduate-middle></span><span data-graduate-last></span></h1>
+          <p class="hero-major" data-major></p>
+          <div class="hero-badges"><span class="badge online">● GRADUATING</span><span class="badge" id="class-badge"></span></div>
+        </div>
+
+        <div class="topology-stage reveal" aria-label="Sơ đồ mạng lễ tốt nghiệp">
+          <svg class="topology-lines" viewBox="0 0 600 430" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M300 70V125M300 305V360M105 215H205M395 215H495M205 150L250 188M395 242L450 280"/>
+            <circle class="packet packet-one" r="5"><animateMotion dur="3.2s" repeatCount="indefinite" path="M105 215H205L300 215"/></circle>
+            <circle class="packet packet-two" r="5"><animateMotion dur="3.8s" repeatCount="indefinite" path="M495 215H395L300 215"/></circle>
+            <circle class="packet packet-three" r="5"><animateMotion dur="3s" repeatCount="indefinite" path="M300 70V125L300 215"/></circle>
+          </svg>
+          <div class="top-node node-cloud">☁<small>KỶ NIỆM</small></div>
+          <div class="top-node node-wifi">◉<small>NIỀM VUI</small></div>
+          <div class="top-node node-client">▣<small>BẠN BÈ</small></div>
+          <div class="top-node node-switch">⇄<small>GIA ĐÌNH</small></div>
+          <div class="top-node node-router">◇<small>THẦY CÔ</small></div>
+          <div class="top-node node-database">▤<small>UIT</small></div>
+          <div class="server-core">
+            <span class="server-leds"><i></i><i></i><i></i></span>
+            <strong>GRADUATION DAY</strong>
+            <span class="core-status">TRẠNG THÁI: <b>SẴN SÀNG</b></span>
+            <span>KHÓA <b data-cohort></b></span>
+          </div>
+        </div>
+        <a class="scroll-prompt" href="#profile">MỞ THƯ MỜI <span>↓</span></a>
+      </section>
+
+      <section class="network-section section-wrap" id="profile">
+        <div class="section-heading reveal"><span class="section-code">TÂN CỬ NHÂN · KHÓA <span data-cohort></span></span><h2 class="profile-heading">Một cột mốc đáng nhớ</h2></div>
+        <div class="profile-grid">
+          <div class="profile-frame panel reveal">
+            <div class="device-leds"><i></i><i></i><i></i><span>GRADUATION PORTRAIT</span></div>
+            <img data-image="profile" alt="Ảnh tốt nghiệp" loading="lazy">
+            <div class="scan-line" aria-hidden="true"></div>
+            <div class="profile-footer"><span>A NEW CHAPTER ✓</span><span><b data-cohort></b> · <b data-student-class></b></span></div>
+          </div>
+          <div class="host-terminal terminal-window reveal">
+            <div class="terminal-bar"><div class="terminal-dots"><span></span><span></span><span></span></div><span>about.graduate</span></div>
+            <dl class="config-list compact">
+              <div><dt>Cử nhân</dt><dd data-graduate-name></dd></div>
+              <div><dt>Chuyên ngành</dt><dd data-major></dd></div>
+              <div><dt>Trường</dt><dd data-school></dd></div>
+              <div><dt>Khóa</dt><dd data-cohort></dd></div>
+              <div><dt>Lớp</dt><dd data-student-class></dd></div>
+              <div><dt>Trạng thái</dt><dd class="text-green">● MÌNH TỐT NGHIỆP RỒI!</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="network-section section-wrap" id="invitation">
+        <div class="section-heading reveal"><span class="section-code">THƯ MỜI · CHÚC MỪNG TỐT NGHIỆP</span><h2>Một lời mời nhỏ cho ngày thật đặc biệt 💌</h2></div>
+        <article class="packet-letter panel reveal">
+          <div class="packet-meta">
+            <span>TỪ:<strong data-graduate-name></strong></span>
+            <span>GỬI ĐẾN:<strong class="text-cyan" data-guest-name></strong></span>
+            <span>DỊP:<strong>LỄ TỐT NGHIỆP <span data-config-year></span></strong></span>
+            <span>TRÂN TRỌNG MỜI:<strong class="text-green">THAM DỰ CÙNG MÌNH ✓</strong></span>
+          </div>
+          <div class="packet-payload">
+            <p class="payload-label">THÂN GỬI:</p>
+            <h3><span class="text-cyan" data-guest-name></span> thân mến,</h3>
+            <p>Cảm ơn <span class="text-cyan" data-guest-name></span> vì đã luôn đồng hành cùng mình trong một hành trình dài đầy những ngày học, những deadline và nhiều kỷ niệm không thể quên.</p>
+            <p>Sau tất cả, mình cuối cùng cũng đã đến được cột mốc đáng nhớ: <strong>mình tốt nghiệp rồi! 🎓</strong></p>
+            <p>Ngày lễ này sẽ ý nghĩa hơn rất nhiều nếu có <span class="text-cyan" data-guest-name></span> đến chung vui, cùng chụp ảnh và lưu lại những khoảnh khắc thật đẹp.</p>
+            <p>Sự hiện diện và lời chúc của bạn là món quà mình rất trân quý. Hẹn gặp bạn tại lễ tốt nghiệp nhé!</p>
+            <p class="signature">Thương mến,<br><span class="text-gold" data-graduate-name></span></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="network-section section-wrap" id="countdown-section">
+        <div class="section-heading reveal"><span class="section-code">SAVE THE DATE</span><h2>Cùng đếm ngược đến ngày tốt nghiệp</h2></div>
+        <div class="countdown-panel panel reveal">
+          <p class="packet-label">HẸN GẶP BẠN SAU</p>
+          <div class="countdown" aria-label="Thời gian còn lại">
+            <div><strong id="count-days">00</strong><span>NGÀY</span></div><b>:</b>
+            <div><strong id="count-hours">00</strong><span>GIỜ</span></div><b>:</b>
+            <div><strong id="count-minutes">00</strong><span>PHÚT</span></div><b>:</b>
+            <div><strong id="count-seconds">00</strong><span>GIÂY</span></div>
+          </div>
+          <p class="countdown-message" id="countdown-message"></p>
+        </div>
+      </section>
+
+      <section class="network-section section-wrap" id="event">
+        <div class="section-heading reveal"><span class="section-code">THÔNG TIN BUỔI LỄ</span><h2 class="event-heading">Rất mong được gặp bạn</h2></div>
+        <div class="event-grid">
+          <div class="terminal-window config-terminal reveal">
+            <div class="terminal-bar"><div class="terminal-dots"><span></span><span></span><span></span></div><span>save-the-date</span></div>
+            <p class="config-title">LỄ TỐT NGHIỆP · NGUYỄN THÀNH NHÂN</p>
+            <dl class="config-list">
+              <div><dt>NGÀY</dt><dd data-event-date></dd></div>
+              <div><dt>LÀM LỄ</dt><dd data-ceremony-time></dd></div>
+              <div><dt>GẶP GỠ · CHỤP ẢNH</dt><dd data-photo-time></dd></div>
+              <div><dt>ĐỊA ĐIỂM</dt><dd>Trường ĐH Công nghệ Thông tin · ĐHQG-HCM</dd></div>
+              <div><dt>ĐỊA CHỈ</dt><dd data-address></dd></div>
+              <div><dt>ĐIỂM HẸN</dt><dd class="text-gold" data-meeting-point></dd></div>
+            </dl>
+          </div>
+          <div class="event-actions reveal">
+            <a class="button button-primary" id="maps-link" target="_blank" rel="noreferrer">📍 Mở bản đồ</a>
+            <a class="button button-outline" id="calendar-link" target="_blank" rel="noreferrer">📅 Thêm vào Google Calendar</a>
+            <button class="button button-outline" id="ics-button" type="button">↓ Tải lịch sự kiện</button>
+            <p>Nhớ lưu lịch nhé, mình sẽ rất vui khi được đón bạn vào ngày đặc biệt này.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="network-section section-wrap" id="meeting-map">
+        <div class="section-heading reveal"><span class="section-code">ĐỊA ĐIỂM GẶP NHAU</span><h2 class="meeting-heading">Hẹn bạn trước cột cờ Tòa E</h2></div>
+        <div class="meeting-card panel reveal">
+          <span class="meeting-pin" aria-hidden="true">📍</span>
+          <div><small>ĐIỂM HẸN</small><h3 data-meeting-point></h3><p>15:30 · Gặp bạn bè, gia đình và cùng chụp ảnh kỷ niệm.</p></div>
+          <a class="button button-outline" id="meeting-map-link" target="_blank" rel="noreferrer">🗺 Mở Google Maps tới UIT</a>
+        </div>
+      </section>
+
+      <section class="network-section section-wrap" id="timeline">
+        <div class="section-heading reveal"><span class="section-code">LỊCH TRÌNH MỘT NGÀY ĐẸP</span><h2>Các mốc thời gian đáng nhớ</h2></div>
+        <div class="trace-label reveal">Cùng mình lưu lại từng khoảnh khắc nhé</div>
+        <ol class="route-list" id="route-list"></ol>
+        <p class="route-result reveal"><span>●</span> Hẹn bạn đúng giờ để không bỏ lỡ những khoảnh khắc đẹp!</p>
+      </section>
+
+      <section class="network-section section-wrap" id="guide">
+        <div class="section-heading reveal"><span class="section-code">MỘT CHÚT LƯU Ý</span><h2>Hẹn gặp bạn tại UIT</h2></div>
+        <div class="guide-grid">
+          <article class="route-card panel reveal"><div class="card-label">LIÊN HỆ</div><h3 data-graduate-name></h3><p>Điện thoại: <a data-phone-link></a></p><p class="text-green">Mình đã sẵn sàng đón bạn vào ngày tốt nghiệp.</p><div class="compact-actions"><a class="button button-primary" data-call-link>📞 Gọi mình</a><a class="button button-outline" data-zalo-link target="_blank" rel="noreferrer">💬 Zalo</a><a class="button button-outline" id="navigate-link" target="_blank" rel="noreferrer">📍 Chỉ đường</a></div></article>
+        </div>
+        <p class="connection-note reveal">Có gì khó tìm, bạn cứ gọi cho mình nhé: <a data-phone-link></a></p>
+      </section>
+
+      <section class="network-section section-wrap" id="wishes">
+        <div class="section-heading reveal"><span class="section-code">GỬI MỘT LỜI CHÚC</span><h2>Ngày vui sẽ trọn vẹn hơn khi có lời chúc của bạn 💌</h2></div>
+        <div class="packet-summary"><span id="packet-count">0 lời chúc</span><span class="text-green">CẢM ƠN BẠN</span></div>
+        <div class="wish-layout">
+          <form class="wish-form terminal-window reveal" id="wish-form">
+            <div class="terminal-bar"><div class="terminal-dots"><span></span><span></span><span></span></div><span>congratulations</span></div>
+            <div class="wish-fields"><label>Tên của bạn<input id="wish-name" name="source" maxlength="40" required placeholder="Tên của bạn"></label><label>Lời chúc<textarea id="wish-message" name="payload" rows="4" maxlength="280" required placeholder="Viết lời chúc tốt nghiệp..."></textarea></label><button class="button button-primary" type="submit">Gửi lời chúc 💚</button><p id="wish-status" role="status"></p></div>
+          </form>
+          <div class="packet-log" id="packet-log" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="network-section finale" id="finale">
+        <div class="final-topology reveal"><span class="text-cyan" data-guest-name></span><i></i><span>MỘT NGÀY ĐÁNG NHỚ</span><i></i><span>LỄ TỐT NGHIỆP</span><i></i><span class="text-gold" data-graduate-name></span></div>
+        <figure class="final-photo reveal"><img data-image="secondary" alt="Khoảnh khắc tốt nghiệp" loading="lazy"><figcaption>NHỮNG KỶ NIỆM MÌNH MUỐN GIỮ LẠI ✓</figcaption></figure>
+        <div class="final-copy reveal"><span class="delivered">THƯ MỜI ĐÃ ĐẾN BẠN ✓</span><h2>Cảm ơn bạn đã nhận lời mời! 💚</h2><p>Hẹn gặp <span class="text-cyan" data-guest-name></span> ngày <span data-event-day></span>.<br>Nhớ mang theo nụ cười thật tươi để cùng mình lưu lại một ngày thật đẹp nhé.</p></div>
+        <div class="terminal-window final-terminal reveal"><div class="terminal-bar"><div class="terminal-dots"><span></span><span></span><span></span></div><span>invitation.message</span></div><pre id="final-console"></pre></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Chúc mừng ngày tốt nghiệp</p><p>© <span data-config-year></span> <span data-graduate-name></span><br><span data-major></span></p><div class="footer-status">HẸN GẶP BẠN NGÀY 27.11.2026 🎓</div><div class="footer-actions"><a data-zalo-link target="_blank" rel="noreferrer">💬 Zalo</a><a data-call-link>📞 Gọi mình</a><button id="share-button" type="button">🔗 Chia sẻ</button></div></footer>
+  </div>
+
+  <button class="music-controller" id="music-button" type="button" aria-label="Bật hoặc tắt nhạc nền" aria-pressed="false"><span class="equalizer"><i></i><i></i><i></i><i></i></span><span><b>NHẠC NỀN</b><small id="music-label">OFF · NHẤN ĐỂ BẬT</small></span></button>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
